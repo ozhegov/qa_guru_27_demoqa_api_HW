@@ -18,8 +18,8 @@ public class TestBase {
 
     @BeforeAll
     static void configuration() {
-        Configuration.baseUrl = "https://demoqa.com"; // System.getProperty("baseUrl", "https://demoqa.com");
-        RestAssured.baseURI = "https://demoqa.com"; // System.getProperty("https://demoqa.com");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        RestAssured.baseURI = System.getProperty("https://demoqa.com");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = "eager";
